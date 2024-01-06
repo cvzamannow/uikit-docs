@@ -31,8 +31,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     Type: "primary",
-    Text: "Button",
-    style: { height: "48px", width: "118px" },
+    Text: "Button",  
   },
 };
 
@@ -40,7 +39,6 @@ export const Secondary: Story = {
   args: {
     Type: "secondary",
     Text: "Button",
-    style: { height: "48px", width: "118px" },
   },
 };
 

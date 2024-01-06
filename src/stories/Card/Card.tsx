@@ -1,27 +1,47 @@
 'use client';
 
-import { ArticleCard, ArticleImage, Padding, ContentCard } from "./Card.style";
-
+import { ArticleCard, ArticleImage, ContentCard } from './Card.style';
 
 export interface CardProps {
-    Content?: JSX.Element;
-    img?: string;
-    style?: React.CSSProperties;
+  /**
+   * Content in card
+   */
+  Content?: JSX.Element;
+  /**
+   * Insert padding according to the existing design
+   * `"top right bottom left"`
+   */
+  padding?: string;
+  /**
+   * Image in card
+   */
+  img?: string;
+  /**
+   * Enter the card type, "general" or "blog"
+   */
+  type?: 'general' | 'blog';
+  /**
+   * Enter additional styles
+   */
+  style?: React.CSSProperties;
 }
 
-
-export default function Card({ Content, img, style, ...props}:CardProps) {
-    return(
-    <Padding>
-        <ArticleCard style={style}>
-          <ContentCard>
-            {Content}
-          </ContentCard>
-          <ArticleImage
-            src={img}
-            alt="article-cover"
-          />
-        </ArticleCard>
-    </Padding>
-    );
+export default function Card({
+  Content,
+  img,
+  style,
+  type= "general",
+  padding,
+  ...props
+}: CardProps) {
+  return (
+    <>
+      <ArticleCard style={style}>
+        <ContentCard type={type} padding={padding}>
+          {Content}
+        </ContentCard>
+        <ArticleImage src={img} alt="img" />
+      </ArticleCard>
+    </>
+  );
 }

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledButton = styled.button`
 
   &.button{
-    
+    font-family: 'Inter', sans-serif;
     backface-visibility: hidden;
     border: 0;
     border-radius: 30px;
