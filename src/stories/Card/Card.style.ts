@@ -43,9 +43,9 @@ export const ContentCard = styled.div<CardProps>`
   bottom: 0;
   z-index: 1;
   background: ${(props) =>
-    props.type === 'general'
+    props.linearGradient === 'general'
       ? 'linear-gradient(180deg, rgba(0, 0, 0, 0.06) 49.48%, rgba(0, 0, 0, 0.8) 100%)'
-      : props.type === 'blog'
+      : props.linearGradient === 'blog'
         ? 'linear-gradient(180deg, rgba(33, 31, 32, 0.9) -2.3%, rgba(33, 31, 32, 0.75605) -2.3%, rgba(17, 6, 15, 0.117) -2.3%, rgba(0, 0, 0, 0.9) 100%)'
         : 'initial'};
 `;

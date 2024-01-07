@@ -35,10 +35,10 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const CardGeneral: Story = {
   args: {
-    img: "https://images.unsplash.com/photo-1482877346909-048fb6477632?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=958&q=80",
-    type: 'general',
+    background: "https://images.unsplash.com/photo-1482877346909-048fb6477632?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=958&q=80",
+    linearGradient: 'general',
     padding: "30px 20px 20px 20px",
-    Content:
+    children:
     <>
       <p style={{ color: "white" }}>
         Earum rerum vero, nostrum, cupiditate repellat quod distinctio facilis repellendus iste ratione reprehenderit architecto est itaque, sequi molestias.
@@ -59,10 +59,10 @@ export const CardGeneral: Story = {
 
 export const CardBlog: Story = {
   args: {
-    img: "https://images.unsplash.com/photo-1482877346909-048fb6477632?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=958&q=80",
-    type: 'blog',
+    background: "https://images.unsplash.com/photo-1482877346909-048fb6477632?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=958&q=80",
+    linearGradient: 'blog',
     padding: "30px 20px 20px 20px",
-    Content:
+    children:
       <>
         <p style={{ color: "white" }}>
           Earum rerum vero, nostrum, cupiditate repellat quod distinctio facilis repellendus iste ratione reprehenderit architecto est itaque, sequi molestias.

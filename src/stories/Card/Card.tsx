@@ -6,7 +6,7 @@ export interface CardProps {
   /**
    * Content in card
    */
-  Content?: JSX.Element;
+  children: React.ReactNode;
   /**
    * Insert padding according to the existing design
    * `"top right bottom left"`
@@ -15,11 +15,11 @@ export interface CardProps {
   /**
    * Image in card
    */
-  img?: string;
+  background?: string;
   /**
-   * Enter the card type, "general" or "blog"
+   * Enter the card type linear-gradient, "general" or "blog"
    */
-  type?: 'general' | 'blog';
+  linearGradient?: 'general' | 'blog';
   /**
    * Enter additional styles
    */
@@ -27,20 +27,20 @@ export interface CardProps {
 }
 
 export default function Card({
-  Content,
-  img,
+  children,
+  background,
   style,
-  type= "general",
+  linearGradient= "general",
   padding,
   ...props
 }: CardProps) {
   return (
     <>
       <ArticleCard style={style}>
-        <ContentCard type={type} padding={padding}>
-          {Content}
+        <ContentCard linearGradient={linearGradient} padding={padding}>
+          {children}
         </ContentCard>
-        <ArticleImage src={img} alt="img" />
+        <ArticleImage src={background} alt="img" />
       </ArticleCard>
     </>
   );
