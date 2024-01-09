@@ -29,11 +29,8 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
 export const Example: Story = {
   args: {
-    children: [
-        <ContentContainer>Content</ContentContainer>
-    ],
-  },
-};
+    children: <ContentContainer>Content</ContentContainer>
+  }
+}

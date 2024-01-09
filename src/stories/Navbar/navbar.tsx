@@ -9,7 +9,7 @@ import {
   FirstSpan,
   SecondSpan,
   ThirdSpan,
-  Paper,
+Paper,
 } from './navbar.style';
 import LinkComponent from './link';
 
@@ -21,7 +21,7 @@ export default function Navbar() {
   };
 
   return (
-    <Paper>
+  <Paper>
     <Nav>
       <PaddingContainer>
         <NavWrapper>
@@ -35,6 +35,7 @@ export default function Navbar() {
           </HamburgerContainer>
         </NavWrapper>
       </PaddingContainer>
-    </Nav></Paper>
+    </Nav>
+  </Paper>
   );
 }

@@ -1,6 +1,4 @@
 'use client';
-
-import Font from '../assets/Font/Font';
 import {
   Card,
   Logo,
@@ -36,7 +34,6 @@ export default function CardSolution({
 }: CardProps) {
   return (
     <>
-    <Font />
     <Card style={style}>
       <Padding>
         <Logo>{icon}</Logo>
