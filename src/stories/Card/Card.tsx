@@ -1,5 +1,5 @@
 'use client';
-
+import React from 'react';
 import { ArticleCard, ArticleImage, ContentCard } from './Card.style';
 
 export interface CardProps {
@@ -11,15 +11,15 @@ export interface CardProps {
    * Insert padding according to the existing design
    * `"top right bottom left"`
    */
-  padding?: string;
+  padding: string;
   /**
    * Image in card
    */
-  background?: string;
+  background: string;
   /**
    * Enter the card type linear-gradient, "general" or "blog"
    */
-  linearGradient?: 'general' | 'blog';
+  linearGradient: 'general' | 'blog';
   /**
    * Enter additional styles
    */
@@ -30,14 +30,14 @@ export default function Card({
   children,
   background,
   style,
-  linearGradient= "general",
+  linearGradient = 'general',
   padding,
   ...props
 }: CardProps) {
   return (
     <>
       <ArticleCard style={style}>
-        <ContentCard linearGradient={linearGradient} padding={padding}>
+        <ContentCard background={background} linearGradient={linearGradient} padding={padding}>
           {children}
         </ContentCard>
         <ArticleImage src={background} alt="img" />

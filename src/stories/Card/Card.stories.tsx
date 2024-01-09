@@ -6,7 +6,7 @@ import Button from "../Button/Button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: "Components/Card/Card",
+  title: "Components/Card",
   component: Card,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
@@ -44,8 +44,8 @@ export const CardGeneral: Story = {
         Earum rerum vero, nostrum, cupiditate repellat quod distinctio facilis repellendus iste ratione reprehenderit architecto est itaque, sequi molestias.
       </p>
       <Button
-        Text="Button"
-        Type="secondary"
+        content="Button"
+        type="secondary"
         onClick={function noRefCheck(){}}
       />
       </>
@@ -68,8 +68,8 @@ export const CardBlog: Story = {
           Earum rerum vero, nostrum, cupiditate repellat quod distinctio facilis repellendus iste ratione reprehenderit architecto est itaque, sequi molestias.
         </p>
         <Button
-          Text="Button"
-          Type="secondary"
+          content="Button"
+          type="secondary"
           onClick={function noRefCheck(){}}
         />
       </>

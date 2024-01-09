@@ -13,15 +13,15 @@ export interface CardProps {
   /**
    * Insert Logo svg from figma
    */
-  logo?: JSX.Element;
+  icon: JSX.Element;
   /**
    * For the title card
    */
-  tittle?: string;
+  tittle: string;
   /**
    * For card description
    */
-  description?: string;
+  description: string;
   /**
    * Enter additional styles
    */
@@ -29,7 +29,7 @@ export interface CardProps {
 }
 
 export default function CardSolution({
-  logo,
+  icon,
   tittle,
   description,
   style,
@@ -39,7 +39,7 @@ export default function CardSolution({
     <Font />
     <Card style={style}>
       <Padding>
-        <Logo>{logo}</Logo>
+        <Logo>{icon}</Logo>
         <Tittle>{tittle}</Tittle>
         <Description>{description}</Description>
       </Padding>

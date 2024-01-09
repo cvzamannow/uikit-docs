@@ -30,7 +30,7 @@ export const ArticleImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: ease-in-out 0.2s; /* Animation */
+  transition: ease-in-out 0.4s; /* Animation */
   animation: ${scaleAnimation} ease-in-out 0.2s;
 `;
 

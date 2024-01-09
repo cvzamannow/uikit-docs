@@ -5,7 +5,7 @@ import CardSolution from "./CardSolution";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: "Components/Card/Card-Solution",
+  title: "Components/Card-Solution",
   component: CardSolution,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
@@ -34,7 +34,7 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const CardSolutions: Story = {
   args: {
-    logo: <svg
+    icon: <svg
     width="40"
     height="40"
     viewBox="0 0 40 40"
