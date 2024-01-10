@@ -37,20 +37,3 @@ jobs:
     
       - name: Run Tests Eslint
         run: yarn lint
-
-  production:
-    needs: [test]
-    name: Deploy to Production
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install Dependencies
-        run: yarn
-      - name: Install Vercel CLI
-        run: yarn global add vercel
-      - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-      - name: Build Project Artifacts
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-      - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
