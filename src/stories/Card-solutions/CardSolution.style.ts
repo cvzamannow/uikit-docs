@@ -1,3 +1,4 @@
+import Text from '../Text/text';
 import styled from 'styled-components';
 
 export const Card = styled.div`
@@ -10,28 +11,26 @@ export const Card = styled.div`
   box-shadow: 10px 10px 50px 0px #0000001a;
   align-items: center;
   display: flex;
+  flex-direction: column;
 `;
 
 export const Padding = styled.div`
   padding: 40px;
 `;
 
-export const Logo = styled.div`
-  margin-top: 20px;
+export const Icon = styled.div`
   width: 40px;
   height: 40px;
 `;
 
-export const Tittle = styled.div`
+export const Tittle = styled(Text)`
   font-family: 'Satoshi', sans-serif;
   color: #2d2d2d;
   font-weight: 700;
   font-size: 26px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 `;
 
-export const Description = styled.p`
+export const Description = styled(Text)`
   font-family: 'Satoshi', sans-serif;
   color: #516371;
   font-weight: 400;
