@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import { ButtonProps } from './Button';
 
-export const StyledButton = styled.button`
-
-  &.button{
+export const StyledButton = styled.button<ButtonProps>`
+  &.button {
     font-family: 'Inter', sans-serif;
     backface-visibility: hidden;
     border: 0;
@@ -12,8 +12,8 @@ export const StyledButton = styled.button`
     cursor: ${({ disabled }) => (disabled ? 'auto' : 'pointer')};
     display: inline-block;
     font-size: 16px;
-    letter-spacing: -0.01em;
-    padding: 16px 32px 16px 32px;
+    letter-spacing: -0.16px;
+    padding: ${(props) => props.padding};
     position: relative;
     text-align: center;
     justify-content: center;
@@ -30,7 +30,7 @@ export const StyledButton = styled.button`
 
     &:hover:active {
       ${({ disabled }) =>
-        !disabled && 'transform: scale(1.05) translateY(.125rem);'}
+        !disabled && 'transform: scale(1.05) translateY(2px);'}
     }
 
     &:focus {
@@ -38,12 +38,12 @@ export const StyledButton = styled.button`
     }
 
     &:focus:before {
-      border-width: 0.125rem;
+      border-width: 2px;
       content: '';
-      left: calc(-1 * 0.375rem);
+      left: calc(-1 * 6px);
       pointer-events: none;
       position: absolute;
-      top: calc(-1 * 0.375rem);
+      top: calc(-1 * 6px);
       transition: border-radius;
       user-select: none;
     }
@@ -58,14 +58,15 @@ export const StyledButton = styled.button`
   }
 
   &.button--primary {
-    color: #FFFFFF;
+    color: #ffffff;
     background: #0041e8;
+    box-shadow: 0px 25px 30px 0px #0041e81a;
   }
 
   &.button--secondary {
     background: #ff000000;
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: transparent;
-    box-shadow: #FFFFFF 0px 0px 0px 1px inset;
+    box-shadow: #ffffff 0px 0px 0px 1px inset;
   }
 `;

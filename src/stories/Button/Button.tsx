@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { StyledButton } from './Button.style';
 import { useState } from 'react';
+import React from 'react';
 
 export interface ButtonProps {
   /**
@@ -11,7 +12,12 @@ export interface ButtonProps {
   /**
    * Enter content button
    */
-  content: string;
+  children: React.ReactNode;
+  /**
+   * Insert padding according to the existing design
+   * `"top right bottom left"`
+   */
+  padding?: string;
   /**
    * Leading to where
    */
@@ -28,7 +34,8 @@ export interface ButtonProps {
 
 export default function Button({
   type = 'primary',
-  content,
+  children,
+  padding= "16px 32px 16px 32px",
   href,
   style,
   ...props
@@ -40,12 +47,14 @@ export default function Button({
       <Link href={href || '/'}>
         <StyledButton
           data-testid={`button--${type}`}
+          padding={padding}
+          type={type}
           className={['button', mode].join(' ')}
           disabled={isDisabled}
           style={style}
           {...props}
         >
-          {content}
+          {children}
         </StyledButton>
       </Link>
     </>
