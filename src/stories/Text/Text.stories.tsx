@@ -17,10 +17,8 @@ const meta = {
           <Title />
           <Description />
           <Subtitle />
-
           <PrimaryDocBlock />
           <Controls />
-
           <Stories />
         </>
       ),

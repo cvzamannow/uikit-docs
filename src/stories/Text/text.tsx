@@ -50,6 +50,9 @@ export interface TextProps {
   styles?: React.CSSProperties;
 }
 
+/**
+ * Primary UI component for user interaction
+ */
 export default function Text({
   children,
   type,
