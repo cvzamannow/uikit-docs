@@ -44,7 +44,7 @@ export default function Button({
   const mode = `button--${type}`;
   return (
     <>
-      <Link href={href || '/'}>
+      <Link href={href || ''}>
         <StyledButton
           data-testid={`button--${type}`}
           padding={padding}
